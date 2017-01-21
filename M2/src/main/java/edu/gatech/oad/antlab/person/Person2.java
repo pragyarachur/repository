@@ -32,7 +32,7 @@ public class Person2 {
 	private String calc(String input) {
 		char[] arr = input.toCharArray();
 		for (int i = arr.length - 1; i > 0; i++) {
-			int loc = (int) Math.random(i + 1);
+			int loc = (int) (Math.random() * (i + 1));
 			char t = arr[i];
 			arr[i] = arr[loc];
 			arr[loc] = t;
