@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+defaultTasks 'jar'
+
+version = '1.0'
+
+dependencies {
+	compile files('lib/resources.jar')
+}
+
+jar {
+    manifest {
+	        attributes 'Implementation-Title': '2340-M2-syoung67',
+                     'Implementation-Version': version
+    }
+}
+
