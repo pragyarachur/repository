@@ -3,10 +3,14 @@ apply plugin: 'java'
 
 defaultTasks 'jar'
 
+version = '1.0'
+
 // contents of jar file
 jar {
     manifest {
-        attributes('Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+        attributes('Implementation-Title': "ntao6's 2340 M2 Build",
+                   'Implementation-Version': version,
+                   'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
                    'Class-Path': '../../lib/resources.jar')
     }
 }
