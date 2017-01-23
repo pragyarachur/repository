@@ -1,0 +1,16 @@
+// import Java default tasks like compileJava, compileTest, javadoc, clean, jar
+apply plugin: 'java'
+
+defaultTasks 'jar'
+
+// contents of jar file
+jar {
+    manifest {
+        attributes('Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                   'Class-Path': '../../lib/resources.jar')
+    }
+}
+
+dependencies {
+    compile files('/lib/resources.jar')
+}
