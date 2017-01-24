@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+defaultTasks 'jar'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+	flatDir {
+		dirs 'lib'
+	}
+}
+
+dependencies {
+	compile files('./lib/resources.jar')
+}
+
+jar {
+    manifest {
+			attributes (
+						'Implementation-Title': 'vvinutna M2 build',
+                       	'Implementation-Version': version,
+						'Class-Path': '../../lib/resources.jar',
+	        			'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+			)
+
+    }
+}
+
