@@ -31,7 +31,7 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  char[] original = input.tocharArray();
+	  char[] original = input.toCharArray();
 	  String modified = "";
 	  for(int i = 2; i < original.length; i++) {
 	  	modified += original[i];
