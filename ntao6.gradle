@@ -5,10 +5,6 @@ defaultTasks 'jar'
 
 version = '1.0'
 
-dependencies {
-    compile files('/lib/resources.jar')
-}
-
 // contents of jar file
 jar {
     manifest {
@@ -20,3 +16,6 @@ jar {
     }
 }
 
+dependencies {
+    compile files('./lib/resources.jar')
+}
