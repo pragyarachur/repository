@@ -5,15 +5,8 @@ defaultTasks 'jar'
 sourceCompatibility = 1.8
 version = '1.0'
 
-repositories {
-	flatDir {
-		dirs 'lib'
-	}
-}
-
 dependencies {
 	compile files('./lib/resources.jar')
-    runtime files('./lib/resources.jar')
 }
 
 jar {
@@ -28,7 +21,4 @@ jar {
     }
 }
 
-task listJars << {
-    configurations.compile.each { File file -> println file.name }
-}
 
